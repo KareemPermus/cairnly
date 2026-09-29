@@ -70,7 +70,7 @@ export default function Dashboard() {
       <div className={styles.header}>
         <div>
           <h1 className={styles.title}>Dashboard</h1>
-          <p className={styles.subtitle}>Your project portfolio at a glance</p>
+          <p className={styles.subtitle}>Your project portfolio at a GO</p>
         </div>
         <button className={styles.refresh} onClick={load} aria-label="Refresh">
           <RefreshCw size={16} /> Refresh
