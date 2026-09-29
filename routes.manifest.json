@@ -1,0 +1,66 @@
+[
+  {
+    "auth_required": false,
+    "method": "GET",
+    "path": "/api/health",
+    "response_shape": {
+      "status": "string"
+    },
+    "sample_body": null,
+    "sample_params": {},
+    "success_status": 200
+  },
+  {
+    "auth_required": false,
+    "method": "GET",
+    "path": "/api/projects",
+    "response_shape": {
+      "_": "array"
+    },
+    "sample_body": null,
+    "sample_params": {},
+    "success_status": 200
+  },
+  {
+    "auth_required": false,
+    "method": "GET",
+    "path": "/api/projects/:id",
+    "response_shape": {
+      "createdAt": "datetime",
+      "description": "string?",
+      "dueDate": "datetime?",
+      "id": "int",
+      "name": "string",
+      "owner": "string?",
+      "priority": "string",
+      "progress": "int",
+      "startDate": "datetime?",
+      "status": "string",
+      "updatedAt": "datetime"
+    },
+    "sample_body": null,
+    "sample_params": {
+      "id": 1
+    },
+    "success_status": 200
+  },
+  {
+    "auth_required": false,
+    "method": "GET",
+    "path": "/api/dashboard/stats",
+    "response_shape": {
+      "activeProjects": "int",
+      "averageProgress": "float",
+      "completedProjects": "int",
+      "onHoldProjects": "int",
+      "overdueProjects": "int",
+      "planningProjects": "int",
+      "recentProjects": "array",
+      "totalProjects": "int",
+      "upcomingDeadlines": "array"
+    },
+    "sample_body": null,
+    "sample_params": {},
+    "success_status": 200
+  }
+]

@@ -1,0 +1,13 @@
+CREATE TABLE IF NOT EXISTS projects (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255) NOT NULL UNIQUE,
+  description TEXT,
+  status VARCHAR(20) NOT NULL DEFAULT 'planning',
+  priority VARCHAR(10) NOT NULL DEFAULT 'medium',
+  progress INTEGER NOT NULL DEFAULT 0,
+  owner VARCHAR(120),
+  "startDate" TIMESTAMPTZ,
+  "dueDate" TIMESTAMPTZ,
+  "createdAt" TIMESTAMPTZ NOT NULL DEFAULT now(),
+  "updatedAt" TIMESTAMPTZ NOT NULL DEFAULT now()
+);
